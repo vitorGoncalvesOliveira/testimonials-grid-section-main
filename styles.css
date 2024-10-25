@@ -1,0 +1,215 @@
+:root {
+
+    --Moderateviolet: hsl(263, 55%, 52%);
+    --Verydarkgrayishblue: hsl(217, 19%, 35%);
+    --Verydarkblackishblue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+    --Lightgray: hsl(0, 0%, 81%);
+    --Lightgrayishblue: hsl(210, 46%, 95%);
+
+    font-family: "Barlow Semi Condensed", sans-serif;
+
+    box-sizing: border-box;
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        padding: 0;
+        margin: 0;
+    }
+
+}
+
+body {
+    background-color: var(--Lightgrayishblue);
+}
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+.user-icon {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.daniel .user-icon h3 {
+    color: var(--White)
+}
+
+.daniel .user-icon h4 {
+    color: var(--White);
+    opacity: 50%;
+    font-weight: 400;
+}
+
+.user-name {
+    display: flex;
+    flex-direction: column;
+}
+
+
+img {
+    border-radius: 50%;
+    max-width: 3rem;
+    max-height: 3rem;
+
+}
+
+.daniel {
+    background-color: var(--Moderateviolet);
+}
+
+.daniel div img {
+    border: solid 2px var(--Verydarkgrayishblue);
+}
+
+.daniel div h2 {
+    color: var(--White);
+}
+
+.daniel div p {
+    color: var(--White);
+    opacity: 50%;
+}
+
+.jonathan {
+    background-color: var(--Verydarkgrayishblue);
+}
+
+.jonathan .user-icon h3 {
+    color: var(--White)
+}
+
+.jonathan .user-icon h4 {
+    color: var(--White);
+    opacity: 50%;
+    font-weight: 400;
+}
+
+.jonathan h2 {
+    color: var(--White);
+}
+
+.jonathan p {
+    color: var(--White);
+    opacity: 50%;
+}
+
+.jonathan div img {
+    border: solid 2px var(--Lightgray);
+}
+
+.jeanette {
+    background-color: var(--White);
+}
+
+.jeanette .user-icon h3 {
+    color: var(--Verydarkgrayishblue)
+}
+
+.jeanette .user-icon h4 {
+    color: var(--Verydarkblackishblue);
+    opacity: 50%;
+    font-weight: 400;
+}
+
+.jeanette h2 {
+    color: var(--Verydarkgrayishblue);
+}
+
+.jeanette p {
+    color: var(--Verydarkgrayishblue);
+    opacity: 50%;
+}
+
+.patrick {
+    background-color: var(--Verydarkblackishblue);
+}
+
+.patrick .user-icon h3 {
+    color: var(--White)
+}
+
+.patrick .user-icon h4 {
+    color: var(--White);
+    opacity: 50%;
+    font-weight: 400;
+}
+
+.patrick h2 {
+    color: var(--White);
+}
+
+.patrick p {
+    color: var(--White);
+    opacity: .5;
+}
+
+.kira {
+    background-color: var(--White);
+}
+
+.kira .user-icon h3 {
+    color: var(--Verydarkgrayishblue)
+}
+
+.kira .user-icon h4 {
+    color: var(--Verydarkgrayishblue);
+    opacity: 50%;
+    font-weight: 400;
+}
+
+.kira h2 {
+    color: var(--Verydarkgrayishblue);
+}
+
+.kira p {
+    color: var(--Verydarkgrayishblue);
+    opacity: .5;
+}
+.attribution{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+
+@media (min-width:1440px)  {
+    main {
+        display: grid;
+        gap: 1rem;
+        height: 90vh;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr 1 fr ;
+        grid-template-areas: 
+        "daniel daniel jonathan kira"
+        "jeanette patrick patrick kira";
+    }
+
+    .daniel {
+        grid-area: daniel;
+    }
+    .jonathan {
+        grid-area: jonathan;
+    }
+
+    .jeanette {
+        grid-area: jeanette;
+    }
+    .kira {
+        grid-area: kira;
+    }
+    .patrick {
+        grid-area: patrick;
+    }
+    
+}
